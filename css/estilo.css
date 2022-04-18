@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    div {
+        background-color: blue;
+    }
+    .contenedortotal {
+        display: grid;
+        grid-template-areas: 
+        "nav logo logo"
+        "nav cont cont"
+        "nav footer footer";
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .logo {
+        grid-area: logo;
+    }
+    .nav {
+        grid-area: nav;
+    }
+    .cont {
+        grid-area: cont;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .contenedortotal {
+        display: grid;
+        grid-template-areas: 
+        "logo nav nav nav"
+        "cont cont cont cont"
+        "footer footer footer footer";
+        grid-template-columns: 10% 30% 30% 30%;
+        grid-template-rows: 1fr 15fr 1fr 1fr;
+    }
+    .logo {
+        grid-area: logo;
+    }
+    .nav {
+        grid-area: nav;
+    }
+    .cont {
+        grid-area: cont;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+
+
+.nav {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end
+}
+.menu li {
+    display: inline-block;
+    text-align: center;
+
+}
+.menu li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-weight: lighter;
+    
+}
+.logo {
+    background-color: black;
+    padding: 10px;
+}
+
+.banner {
+    padding: 160px;
+    text-align: center;
+    background-image: url(../Imagenes/Group\ 37.png);
+}
