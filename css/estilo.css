@@ -54,6 +54,7 @@
     }
     .cont {
         grid-area: cont;
+        background: radial-gradient(circle, black, white, black)
     }
     footer {
         grid-area: footer;
@@ -101,6 +102,10 @@
     padding: 160px;
     text-align: center;
     background-image: url(../Imagenes/Group\ 37.png);
+    transition: all 4s ease;
+}
+.banner :hover {
+    transform: scale(1.5);
 }
 .iconos {
     display: flex;
