@@ -5,10 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 600px) {
-    div {
-        background-color: blue;
-    }
+@media screen and (max-width: 700px) {
     .contenedortotal {
         display: grid;
         grid-template-areas: 
@@ -16,7 +13,7 @@
         "nav cont cont"
         "nav footer footer";
         grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0fr 1fr 1fr;
     }
     .logo {
         grid-area: logo;
@@ -26,9 +23,16 @@
     }
     .cont {
         grid-area: cont;
+    
     }
     footer {
         grid-area: footer;
+    }
+    .iconos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
     }
 }
 
@@ -39,8 +43,8 @@
         "logo nav nav nav"
         "cont cont cont cont"
         "footer footer footer footer";
-        grid-template-columns: 10% 30% 30% 30%;
-        grid-template-rows: 1fr 15fr 1fr 1fr;
+        grid-template-columns: 20% 26% 26% 26%;
+        grid-template-rows: 0.1fr 1fr 0fr;
     }
     .logo {
         grid-area: logo;
@@ -53,6 +57,7 @@
     }
     footer {
         grid-area: footer;
+        grid-column: 1/5;
     }
 }
 
@@ -81,13 +86,73 @@
     font-weight: lighter;
     
 }
+.menu li :hover {
+    text-decoration: underline;
+}
 .logo {
     background-color: black;
     padding: 10px;
+}
+.logo img {
+    margin-left: 10px;
 }
 
 .banner {
     padding: 160px;
     text-align: center;
     background-image: url(../Imagenes/Group\ 37.png);
+}
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+}
+.iconos :hover {
+    color: rgb(0, 0, 0);
+}
+.parrafo {
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.parrafo h2 {
+    font-size: 2rem;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+footer {
+    display: grid;
+    grid-template-areas: 
+    "logofoot contacto"
+    "redes contacto";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr;
+    background-color: black;
+    display: ;
+}
+.logofoot {
+    margin-left: 40px;
+}
+.redes {
+    margin-left: 40px;
+    grid-column: 1/2;
+    grid-row: 2/2;
+    align-self: flex-end;
+}
+.redes img {
+    padding: 20px;
+}
+.contacto {
+    text-align: right;
+    margin: 40px;
+    font-size: 1.2rem;
+    color: white;
+    grid-row: 2/2;
 }
